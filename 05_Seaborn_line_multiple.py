@@ -1,0 +1,13 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Cargar los datos y preparar el DataFrame
+df = pd.read_csv(r'D:\Germán\Desktop\Python Files\automobile.csv')
+df = df.dropna(axis=0)
+
+# Genera el gráfico
+sns.lineplot(x='horsepower', y='price', data=df, color='blue')
+sns.lineplot(x='engine-size', y='price', data=df, color='green')
+sns.lineplot(x='curb-weight', y='price', data=df, color='red')
+plt.show()
